@@ -42,6 +42,14 @@ UserSchema.methods.generateAuthToken = function () {
 	return this.save().then(() => token);
 }
 
+UserSchema.methods.removeToken = function (token) {
+	return this.update({
+		$pull: {
+			tokens: {token}
+		}
+	})
+}
+
 UserSchema.statics.findByCredentials = function (username, password) {
 	return this.findOne({username})
 		.then(user => {
@@ -57,6 +65,20 @@ UserSchema.statics.findByCredentials = function (username, password) {
 				return Promise.reject();
 			}
 		});
+}
+
+UserSchema.statics.findByToken = function (token) {
+	let decoded;
+	try {
+		decoded = jwt.verify(token, process.env.JWT_SECRET);
+	} catch(e) {
+		return Promise.reject(e);
+	}
+	return this.findOne({
+		_id: decoded._id,
+		'tokens.access': decoded.access,
+		'tokens.token': token,
+	});
 }
 
 UserSchema.pre('save', function (next) {

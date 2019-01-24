@@ -12,6 +12,7 @@ const {mongoose} = require('./db/mongoose');
 const {Item} = require('./models/Item');
 const {User} = require('./models/User');
 const {logError} = require('./logs/error');
+const {authenticate} = require('./middleware/authenticate');
 
 //Server configuration
 const app = express();
@@ -20,26 +21,27 @@ const port = process.env.PORT || 3000;
 //Middleware
 app.use(bodyParser.json());
 app.use((req, res, next) => {
-	let now = new Date().toString();
-	let log = `${now}: ${req.method} ${req.url}`;
-	console.log(log);
-	fs.appendFile('./logs/server.log', log + '\n', err => {
-		if(err) {
-			console.log("Unable to append to server.log");
-		}
-	})
-	next();
+	if(process.env.NODE_ENV !== 'test') {
+		let now = new Date().toString();
+		let log = `${now}: ${req.method} ${req.url}`;
+		console.log(log);
+		fs.appendFile('./logs/server.log', log + '\n', err => {
+			if(err) {
+				console.log("Unable to append to server.log");
+			}
+		})
+		next();
+	} else {
+		next();
+	}
 });
 
 
 //CLIENT ROUTE
-app.get('/', (req, res) => {
-	res.send('Client');
-	//TODO: fill out route for client response
-});
+app.get('/', express.static('./public'));
 
 //CREATE ITEM
-app.post('/item', (req, res) => {
+app.post('/item', authenticate, (req, res) => {
 	let body = _.pick(req.body, ['name', 'stackType', 'active', 'notes']);
 	let item = new Item(body);
 	item.setIpAddress();
@@ -54,7 +56,7 @@ app.post('/item', (req, res) => {
 });
 
 //READ ALL ITEMS
-app.get('/item', (req, res) => {
+app.get('/item', authenticate, (req, res) => {
 	Item.find()
 		.then(items => {
 			res.send({items});
@@ -64,12 +66,8 @@ app.get('/item', (req, res) => {
 		});
 });
 
-//READ ONE ITEM
-	//TODO if necessary
-
-
 //UPDATE ITEM
-app.patch('/item/:_id', (req, res) => {
+app.patch('/item/:_id', authenticate, (req, res) => {
 	let {_id} = req.params;
 	if(!ObjectID.isValid(_id)) {
 		return res.status(404).send();
@@ -88,7 +86,7 @@ app.patch('/item/:_id', (req, res) => {
 });
 
 //DELETE ITEM
-app.delete('/item/:_id', (req, res) => {
+app.delete('/item/:_id', authenticate, (req, res) => {
 	let {_id} = req.params;
 	if(!ObjectID.isValid(_id)) {
 		return res.status(404).send();
@@ -119,9 +117,22 @@ app.post('/login', (req, res) => {
 });
 
 //LOGOUT USER
+app.delete('/logout', authenticate, (req, res) => {
+	req.user.removeToken(req.token)
+		.then(() => {
+			res.send();
+		}).catch(e => {
+			res.status(400).send();
+			logError(e, req);
+		});
+});
 
-//CREATE USER - Only for superusers
-app.post('/user', (req, res) => {
+
+//CREATE USER - superuser only
+app.post('/user', authenticate, (req, res) => {
+	if(!req.user.superuser) {
+		return res.status(401).send();
+	}
 	let body = _.pick(req.body, ['username', 'password', 'superuser']);
 	let user = new User(body);
 	user.save()
@@ -133,9 +144,15 @@ app.post('/user', (req, res) => {
 		});
 });
 
-//UPDATE USER
-app.patch('/user/:_id', (req, res) => {
+//UPDATE USER - superuser only
+app.patch('/user/:_id', authenticate, (req, res) => {
+	if(!req.user.superuser) {
+		return res.status(401).send();
+	}
 	let {_id} = req.params;
+	if(!ObjectID.isValid(_id)) {
+		return res.status(400).send();
+	}
 	let body = _.pick(req.body, ['password', 'superuser']);
 	User.findOneAndUpdate({_id}, {$set: body}, {new: true})
 		.then(user => {
@@ -149,11 +166,31 @@ app.patch('/user/:_id', (req, res) => {
 		});
 });
 
-//DELETE USER
+//DELETE USER - superuser only
+app.delete('/user/:_id', authenticate, (req, res) => {
+	if(!req.user.superuser) {
+		return res.status(401).send();
+	}
+	let {_id} = req.params;
+	if(!ObjectID.isValid(_id)) {
+		res.status(400).send();
+	}
+	User.findOneAndDelete({_id})
+		.then(user => {
+			if(!user) {
+				return res.status(404).send();
+			}
+			res.send({user});
+		}).catch(e => {
+			res.status(400).send();
+			logError(e, req);
+		});
+});
 
-
+//Init Server
 app.listen(port, () => {
 	console.log('Server is listening on port ', port);
 });
+
 
 module.exports = {app};
