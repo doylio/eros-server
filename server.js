@@ -143,6 +143,10 @@ app.purge('/reset/:_id', authenticate, (req, res) => {
 app.post('/login', (req, res) => {
 	let {username, password} = req.body;
 	User.findByCredentials(username, password)
+		.then(user => {
+			user.lastLogin = new Date().toLocaleString();
+			return user.save();
+		})
 		.then(user => user.generateAuthToken())
 		.then(token => {
 			res.header('x-auth', token).send();
@@ -157,6 +161,20 @@ app.delete('/logout', authenticate, (req, res) => {
 	req.user.removeToken(req.token)
 		.then(() => {
 			res.send();
+		}).catch(e => {
+			res.status(400).send();
+			logError(e, req);
+		});
+});
+
+//READ ALL USERS - superuser only
+app.get('/user', authenticate, (req, res) => {
+	if(!req.user.superuser) {
+		res.status(401).send();
+	}
+	User.find()
+		.then(users => {
+			res.send({users});
 		}).catch(e => {
 			res.status(400).send();
 			logError(e, req);

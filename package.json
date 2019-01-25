@@ -6,7 +6,8 @@
   "scripts": {
     "test": "export NODE_ENV=test || SET \"NODE_ENV=test\" && mocha --timeout 15000 tests/*.test.js",
     "test-watch": "nodemon --exec \"npm run test\"",
-    "start": "node server.js"
+    "start": "node server.js",
+    "init-db": "node db/init-db"
   },
   "repository": {
     "type": "git",

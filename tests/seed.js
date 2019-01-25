@@ -41,7 +41,8 @@ const testUsers = [{
 	tokens: [{
 		access: 'auth',
 		token: jwt.sign({_id: firstObjectID, access: 'auth'}, process.env.JWT_SECRET).toString()
-	}]
+	}],
+	lastLogin: new Date().toString(),
 }, {
 	_id: secondObjectID.toHexString(),
 	username: "ron.weasley",
@@ -50,7 +51,8 @@ const testUsers = [{
 	tokens: [{
 		access: 'auth',
 		token: jwt.sign({_id: secondObjectID, access: 'auth'}, process.env.JWT_SECRET).toString()
-	}]
+	}],
+	lastLogin: null,
 }];
 
 const populateUsers = done => {

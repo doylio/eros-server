@@ -360,6 +360,43 @@ describe('PURGE /reset/:_id', () => {
 	});
 })
 
+describe('GET /user', () => {
+	it('should return the list of users', done => {
+		let {token} = testUsers[0].tokens[0];
+		request(app)
+		.get('/user')
+		.set('x-auth', token)
+		.expect(200)
+		.expect(res => {
+			expect(res.body.users).toBeDefined();
+			expect(res.body.users.length).toBe(2);
+		})
+		.end(done);
+	});
+	it('should return 401 for an invalid token', done => {
+		let token = 'NotAJWT';
+		request(app)
+		.get('/user')
+		.set('x-auth', token)
+		.expect(401)
+		.expect(res => {
+			expect(res.body.users).not.toBeDefined();
+		})
+		.end(done);
+	});
+	it('should return 401 for a non-superuser token', done => {
+		let {token} = testUsers[1].tokens[0];
+		request(app)
+		.get('/user')
+		.set('x-auth', token)
+		.expect(401)
+		.expect(res => {
+			expect(res.body.users).not.toBeDefined();
+		})
+		.end(done);
+	});
+});
+
 describe('POST /user', () => {
 	it('should create a new user', done => {
 		let body = {
@@ -577,7 +614,7 @@ describe('PATCH /user/:_id', () => {
 });
 
 describe('POST /login', () => {
-	it('should return an auth token', done => {
+	it('should return an auth token and set the last login', done => {
 		let {username, password} = testUsers[0];
 		request(app)
 		.post('/login')
@@ -593,7 +630,8 @@ describe('POST /login', () => {
 				.then(user => {
 					expect(user.tokens.length).toBe(2);
 					expect(user.tokens.reverse()[0].token).toBe(res.headers['x-auth']);
-					done()
+					expect(user.lastLogin).not.toBeNull();
+					done();
 				}).catch(done);
 		});
 	});

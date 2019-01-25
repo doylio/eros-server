@@ -763,3 +763,11 @@ Fri Jan 25 2019 11:24:00 GMT-0500 (Eastern Standard Time): POST /reboot/5c4a3876
 Fri Jan 25 2019 11:28:17 GMT-0500 (Eastern Standard Time): POST /reboot/5c4a38761803cd69e0f19539
 Fri Jan 25 2019 11:34:15 GMT-0500 (Eastern Standard Time): PURGE /reset/5c4a38761803cd69e0f19539
 Fri Jan 25 2019 11:50:45 GMT-0500 (Eastern Standard Time): POST /reboot/5c4a38761803cd69e0f19539
+Fri Jan 25 2019 15:05:11 GMT-0500 (Eastern Standard Time): POST /user
+Fri Jan 25 2019 15:05:40 GMT-0500 (Eastern Standard Time): POST /user
+Fri Jan 25 2019 15:07:02 GMT-0500 (Eastern Standard Time): POST /user
+Fri Jan 25 2019 15:07:25 GMT-0500 (Eastern Standard Time): DELETE /logout
+Fri Jan 25 2019 15:07:50 GMT-0500 (Eastern Standard Time): POST /login
+Fri Jan 25 2019 15:08:48 GMT-0500 (Eastern Standard Time): GET /user
+Fri Jan 25 2019 15:09:21 GMT-0500 (Eastern Standard Time): GET /user
+Fri Jan 25 2019 15:09:46 GMT-0500 (Eastern Standard Time): GET /user

@@ -27,11 +27,15 @@ const UserSchema = new mongoose.Schema({
 			type: String,
 			required: true
 		}
-	}]
+	}],
+	lastLogin: {
+		type: String,
+		default: null
+	}
 });
 
 UserSchema.methods.toJSON = function () {
-	return _.pick(this.toObject(), ['username', '_id', 'superuser']);
+	return _.pick(this.toObject(), ['username', '_id', 'superuser', 'lastLogin']);
 }
 
 UserSchema.methods.generateAuthToken = function () {
