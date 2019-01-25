@@ -179,7 +179,7 @@ describe('PATCH /item/:_id', () => {
 		.expect(404)
 		.end(done);
 	});
-	it('should not return 404 for invalid ObjectID', done => {
+	it('should not return 400 for invalid ObjectID', done => {
 		let body = {
 			name: 'Sam',
 			active: false,
@@ -190,7 +190,7 @@ describe('PATCH /item/:_id', () => {
 		.patch(`/item/${_id}`)
 		.set('x-auth', token)
 		.send(body)
-		.expect(404)
+		.expect(400)
 		.end(done);
 	});
 	it('should reject an invalid token', done => {
@@ -250,13 +250,13 @@ describe('DELETE /item/:_id', () => {
 		.expect(404)
 		.end(done);
 	});
-	it('should return 404 for invalid ObjectID', done => {
+	it('should return 400 for invalid ObjectID', done => {
 		let _id = 'ThisIsNotAnObjectID';
 		let {token} = testUsers[1].tokens[0];
 		request(app)
 		.delete(`/item/${_id}`)
 		.set('x-auth', token)
-		.expect(404)
+		.expect(400)
 		.end(done);
 	});
 	it('should reject an invalid token', done => {
@@ -281,6 +281,84 @@ describe('DELETE /item/:_id', () => {
 		});
 	});
 });
+
+describe('POST /reboot/:_id', () => {
+	it('should reboot the server', done => {
+		let {_id} = testItems[0];
+		let {token} = testUsers[1].tokens[0];
+		request(app)
+		.post(`/reboot/${_id}`)
+		.set('x-auth', token)
+		.expect(200)
+		.end(done)
+	});
+	it('should return 400 for invalid ObjectID', done => {
+		let _id = "ThisIsNotAnObjectID";
+		let {token} =  testUsers[1].tokens[0];
+		request(app)
+		.post(`/reboot/${_id}`)
+		.set('x-auth', token)
+		.expect(400)
+		.end(done)
+	});
+	it('should return 404 for non-existent ObjectID', done => {
+		let _id = new ObjectID();
+		let {token} = testUsers[1].tokens[0];
+		request(app)
+		.post(`/reboot/${_id}`)
+		.set('x-auth', token)
+		.expect(404)
+		.end(done)
+	});
+	it('should reject an invalid token', done => {
+		let {_id} = testItems[0];
+		let token = "NotAJWT";
+		request(app)
+		.post(`/reboot/${_id}`)
+		.set('x-auth', token)
+		.expect(401)
+		.end(done)
+	})
+});
+
+describe('PURGE /reset/:_id', () => {
+	it('should reset the server', done => {
+		let {_id} = testItems[1];
+		let {token} = testUsers[1].tokens[0];
+		request(app)
+		.purge(`/reset/${_id}`)
+		.set('x-auth', token)
+		.expect(200)
+		.end(done)
+	});
+	it('should return 404 for non-existent ObjectID', done => {
+		let _id = new ObjectID();
+		let {token} = testUsers[1].tokens[0];
+		request(app)
+		.purge(`/reset/${_id}`)
+		.set('x-auth', token)
+		.expect(404)
+		.end(done)
+	});
+	it('should return 400 for invalid ObjectID', done => {
+		let _id = "ThisIsNotAnObjectID";
+		let {token} = testUsers[1].tokens[0];
+		request(app)
+		.purge(`/reset/${_id}`)
+		.set('x-auth', token)
+		.expect(400)
+		.end(done)
+	});
+	it('should reset the server', done => {
+		let {_id} = testItems[1];
+		let token = "NotAJWT";
+		request(app)
+		.purge(`/reset/${_id}`)
+		.set('x-auth', token)
+		.expect(401)
+		.end(done)
+	});
+})
 
 describe('POST /user', () => {
 	it('should create a new user', done => {
@@ -668,3 +746,4 @@ describe('DELETE /user/:_id', () => {
 		});
 	});
 });
+

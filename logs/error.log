@@ -1192,3 +1192,738 @@ CastError: Cast to ObjectId failed for value "ThisIsNotAnObjectID" at path "_id"
 Thu Jan 24 2019 16:47:55 GMT-0500 (Eastern Standard Time): DELETE /user/5c4a327e11912625a81574d0
 JsonWebTokenError: jwt malformed
 
+Fri Jan 25 2019 11:34:47 GMT-0500 (Eastern Standard Time): POST /item
+ValidationError: name: Path `name` is required.
+
+Fri Jan 25 2019 11:34:48 GMT-0500 (Eastern Standard Time): POST /item
+ValidationError: stackType: Path `stackType` is required.
+
+Fri Jan 25 2019 11:34:48 GMT-0500 (Eastern Standard Time): POST /item
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:34:48 GMT-0500 (Eastern Standard Time): GET /item
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:34:49 GMT-0500 (Eastern Standard Time): PATCH /item/5c4b3aa5713fe60cc856566b
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:34:50 GMT-0500 (Eastern Standard Time): DELETE /item/5c4b3aa5713fe60cc856566c
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:34:50 GMT-0500 (Eastern Standard Time): POST /user
+MongoError: E11000 duplicate key error collection: ErosTesting.users index: username_1 dup key: { : "harry.potter" }
+
+Fri Jan 25 2019 11:34:50 GMT-0500 (Eastern Standard Time): POST /user
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:34:52 GMT-0500 (Eastern Standard Time): PATCH /user/5c4b3aa5713fe60cc856566e
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:34:53 GMT-0500 (Eastern Standard Time): POST /login
+undefined
+
+Fri Jan 25 2019 11:34:53 GMT-0500 (Eastern Standard Time): POST /login
+undefined
+
+Fri Jan 25 2019 11:34:53 GMT-0500 (Eastern Standard Time): DELETE /logout
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:34:54 GMT-0500 (Eastern Standard Time): DELETE /user/ThisIsNotAnObjectID
+CastError: Cast to ObjectId failed for value "ThisIsNotAnObjectID" at path "_id" for model "User"
+
+Fri Jan 25 2019 11:34:54 GMT-0500 (Eastern Standard Time): DELETE /user/5c4b3aa5713fe60cc856566e
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:35:59 GMT-0500 (Eastern Standard Time): POST /item
+ValidationError: name: Path `name` is required.
+
+Fri Jan 25 2019 11:36:00 GMT-0500 (Eastern Standard Time): POST /item
+ValidationError: stackType: Path `stackType` is required.
+
+Fri Jan 25 2019 11:36:00 GMT-0500 (Eastern Standard Time): POST /item
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:36:00 GMT-0500 (Eastern Standard Time): GET /item
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:36:01 GMT-0500 (Eastern Standard Time): PATCH /item/5c4b3aea08ceda32c4102508
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:36:01 GMT-0500 (Eastern Standard Time): DELETE /item/5c4b3aea08ceda32c4102509
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:36:02 GMT-0500 (Eastern Standard Time): POST /user
+MongoError: E11000 duplicate key error collection: ErosTesting.users index: username_1 dup key: { : "harry.potter" }
+
+Fri Jan 25 2019 11:36:02 GMT-0500 (Eastern Standard Time): POST /user
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:36:04 GMT-0500 (Eastern Standard Time): PATCH /user/5c4b3aea08ceda32c410250b
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:36:05 GMT-0500 (Eastern Standard Time): POST /login
+undefined
+
+Fri Jan 25 2019 11:36:05 GMT-0500 (Eastern Standard Time): POST /login
+undefined
+
+Fri Jan 25 2019 11:36:05 GMT-0500 (Eastern Standard Time): DELETE /logout
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:36:06 GMT-0500 (Eastern Standard Time): DELETE /user/ThisIsNotAnObjectID
+CastError: Cast to ObjectId failed for value "ThisIsNotAnObjectID" at path "_id" for model "User"
+
+Fri Jan 25 2019 11:36:06 GMT-0500 (Eastern Standard Time): DELETE /user/5c4b3aea08ceda32c410250b
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:40:37 GMT-0500 (Eastern Standard Time): POST /item
+ValidationError: name: Path `name` is required.
+
+Fri Jan 25 2019 11:40:37 GMT-0500 (Eastern Standard Time): POST /item
+ValidationError: stackType: Path `stackType` is required.
+
+Fri Jan 25 2019 11:40:37 GMT-0500 (Eastern Standard Time): POST /item
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:40:38 GMT-0500 (Eastern Standard Time): GET /item
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:40:38 GMT-0500 (Eastern Standard Time): PATCH /item/5c4b3bff8c2728596087771e
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:40:39 GMT-0500 (Eastern Standard Time): DELETE /item/5c4b3bff8c2728596087771f
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:40:40 GMT-0500 (Eastern Standard Time): POST /user
+MongoError: E11000 duplicate key error collection: ErosTesting.users index: username_1 dup key: { : "harry.potter" }
+
+Fri Jan 25 2019 11:40:40 GMT-0500 (Eastern Standard Time): POST /user
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:40:41 GMT-0500 (Eastern Standard Time): PATCH /user/5c4b3bff8c27285960877721
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:40:41 GMT-0500 (Eastern Standard Time): POST /login
+undefined
+
+Fri Jan 25 2019 11:40:41 GMT-0500 (Eastern Standard Time): POST /login
+undefined
+
+Fri Jan 25 2019 11:40:42 GMT-0500 (Eastern Standard Time): DELETE /logout
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:40:42 GMT-0500 (Eastern Standard Time): DELETE /user/ThisIsNotAnObjectID
+CastError: Cast to ObjectId failed for value "ThisIsNotAnObjectID" at path "_id" for model "User"
+
+Fri Jan 25 2019 11:40:43 GMT-0500 (Eastern Standard Time): DELETE /user/5c4b3bff8c27285960877721
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:40:54 GMT-0500 (Eastern Standard Time): POST /item
+ValidationError: name: Path `name` is required.
+
+Fri Jan 25 2019 11:40:54 GMT-0500 (Eastern Standard Time): POST /item
+ValidationError: stackType: Path `stackType` is required.
+
+Fri Jan 25 2019 11:40:54 GMT-0500 (Eastern Standard Time): POST /item
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:40:55 GMT-0500 (Eastern Standard Time): GET /item
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:40:55 GMT-0500 (Eastern Standard Time): PATCH /item/5c4b3c1330852803c86d335e
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:40:56 GMT-0500 (Eastern Standard Time): DELETE /item/5c4b3c1330852803c86d335f
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:40:57 GMT-0500 (Eastern Standard Time): POST /user
+MongoError: E11000 duplicate key error collection: ErosTesting.users index: username_1 dup key: { : "harry.potter" }
+
+Fri Jan 25 2019 11:40:57 GMT-0500 (Eastern Standard Time): POST /user
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:40:59 GMT-0500 (Eastern Standard Time): PATCH /user/5c4b3c1330852803c86d3361
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:40:59 GMT-0500 (Eastern Standard Time): POST /login
+undefined
+
+Fri Jan 25 2019 11:40:59 GMT-0500 (Eastern Standard Time): POST /login
+undefined
+
+Fri Jan 25 2019 11:41:00 GMT-0500 (Eastern Standard Time): DELETE /logout
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:41:00 GMT-0500 (Eastern Standard Time): DELETE /user/ThisIsNotAnObjectID
+CastError: Cast to ObjectId failed for value "ThisIsNotAnObjectID" at path "_id" for model "User"
+
+Fri Jan 25 2019 11:41:01 GMT-0500 (Eastern Standard Time): DELETE /user/5c4b3c1330852803c86d3361
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:41:33 GMT-0500 (Eastern Standard Time): POST /item
+ValidationError: name: Path `name` is required.
+
+Fri Jan 25 2019 11:41:33 GMT-0500 (Eastern Standard Time): POST /item
+ValidationError: stackType: Path `stackType` is required.
+
+Fri Jan 25 2019 11:41:33 GMT-0500 (Eastern Standard Time): POST /item
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:41:34 GMT-0500 (Eastern Standard Time): GET /item
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:41:34 GMT-0500 (Eastern Standard Time): PATCH /item/5c4b3c37bec3f95cd8aee47d
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:41:35 GMT-0500 (Eastern Standard Time): DELETE /item/5c4b3c37bec3f95cd8aee47e
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:41:35 GMT-0500 (Eastern Standard Time): POST /user
+MongoError: E11000 duplicate key error collection: ErosTesting.users index: username_1 dup key: { : "harry.potter" }
+
+Fri Jan 25 2019 11:41:36 GMT-0500 (Eastern Standard Time): POST /user
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:41:37 GMT-0500 (Eastern Standard Time): PATCH /user/5c4b3c37bec3f95cd8aee480
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:41:38 GMT-0500 (Eastern Standard Time): POST /login
+undefined
+
+Fri Jan 25 2019 11:41:38 GMT-0500 (Eastern Standard Time): POST /login
+undefined
+
+Fri Jan 25 2019 11:41:39 GMT-0500 (Eastern Standard Time): DELETE /logout
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:41:39 GMT-0500 (Eastern Standard Time): DELETE /user/ThisIsNotAnObjectID
+CastError: Cast to ObjectId failed for value "ThisIsNotAnObjectID" at path "_id" for model "User"
+
+Fri Jan 25 2019 11:41:40 GMT-0500 (Eastern Standard Time): DELETE /user/5c4b3c37bec3f95cd8aee480
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:42:04 GMT-0500 (Eastern Standard Time): POST /item
+ValidationError: name: Path `name` is required.
+
+Fri Jan 25 2019 11:42:04 GMT-0500 (Eastern Standard Time): POST /item
+ValidationError: stackType: Path `stackType` is required.
+
+Fri Jan 25 2019 11:42:04 GMT-0500 (Eastern Standard Time): POST /item
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:42:04 GMT-0500 (Eastern Standard Time): GET /item
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:42:05 GMT-0500 (Eastern Standard Time): PATCH /item/5c4b3c599a54805768a269a1
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:42:06 GMT-0500 (Eastern Standard Time): DELETE /item/5c4b3c599a54805768a269a2
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:42:06 GMT-0500 (Eastern Standard Time): POST /user
+MongoError: E11000 duplicate key error collection: ErosTesting.users index: username_1 dup key: { : "harry.potter" }
+
+Fri Jan 25 2019 11:42:06 GMT-0500 (Eastern Standard Time): POST /user
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:42:08 GMT-0500 (Eastern Standard Time): PATCH /user/5c4b3c599a54805768a269a4
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:42:09 GMT-0500 (Eastern Standard Time): POST /login
+undefined
+
+Fri Jan 25 2019 11:42:09 GMT-0500 (Eastern Standard Time): POST /login
+undefined
+
+Fri Jan 25 2019 11:42:09 GMT-0500 (Eastern Standard Time): DELETE /logout
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:42:10 GMT-0500 (Eastern Standard Time): DELETE /user/ThisIsNotAnObjectID
+CastError: Cast to ObjectId failed for value "ThisIsNotAnObjectID" at path "_id" for model "User"
+
+Fri Jan 25 2019 11:42:10 GMT-0500 (Eastern Standard Time): DELETE /user/5c4b3c599a54805768a269a4
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:45:11 GMT-0500 (Eastern Standard Time): POST /item
+ValidationError: name: Path `name` is required.
+
+Fri Jan 25 2019 11:45:11 GMT-0500 (Eastern Standard Time): POST /item
+ValidationError: stackType: Path `stackType` is required.
+
+Fri Jan 25 2019 11:45:11 GMT-0500 (Eastern Standard Time): POST /item
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:45:12 GMT-0500 (Eastern Standard Time): GET /item
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:45:12 GMT-0500 (Eastern Standard Time): PATCH /item/5c4b3d142a0d29288830a62a
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:45:13 GMT-0500 (Eastern Standard Time): DELETE /item/5c4b3d142a0d29288830a62b
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:45:14 GMT-0500 (Eastern Standard Time): POST /user
+MongoError: E11000 duplicate key error collection: ErosTesting.users index: username_1 dup key: { : "harry.potter" }
+
+Fri Jan 25 2019 11:45:14 GMT-0500 (Eastern Standard Time): POST /user
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:45:16 GMT-0500 (Eastern Standard Time): PATCH /user/5c4b3d142a0d29288830a62d
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:45:16 GMT-0500 (Eastern Standard Time): POST /login
+undefined
+
+Fri Jan 25 2019 11:45:17 GMT-0500 (Eastern Standard Time): POST /login
+undefined
+
+Fri Jan 25 2019 11:45:17 GMT-0500 (Eastern Standard Time): DELETE /logout
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:45:17 GMT-0500 (Eastern Standard Time): DELETE /user/ThisIsNotAnObjectID
+CastError: Cast to ObjectId failed for value "ThisIsNotAnObjectID" at path "_id" for model "User"
+
+Fri Jan 25 2019 11:45:18 GMT-0500 (Eastern Standard Time): DELETE /user/5c4b3d142a0d29288830a62d
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:45:36 GMT-0500 (Eastern Standard Time): POST /item
+ValidationError: name: Path `name` is required.
+
+Fri Jan 25 2019 11:45:36 GMT-0500 (Eastern Standard Time): POST /item
+ValidationError: stackType: Path `stackType` is required.
+
+Fri Jan 25 2019 11:45:37 GMT-0500 (Eastern Standard Time): POST /item
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:45:37 GMT-0500 (Eastern Standard Time): GET /item
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:45:38 GMT-0500 (Eastern Standard Time): PATCH /item/5c4b3d2e34f2ad47103a7771
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:45:38 GMT-0500 (Eastern Standard Time): DELETE /item/5c4b3d2e34f2ad47103a7772
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:45:39 GMT-0500 (Eastern Standard Time): POST /user
+MongoError: E11000 duplicate key error collection: ErosTesting.users index: username_1 dup key: { : "harry.potter" }
+
+Fri Jan 25 2019 11:45:39 GMT-0500 (Eastern Standard Time): POST /user
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:45:41 GMT-0500 (Eastern Standard Time): PATCH /user/5c4b3d2e34f2ad47103a7774
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:45:42 GMT-0500 (Eastern Standard Time): POST /login
+undefined
+
+Fri Jan 25 2019 11:45:42 GMT-0500 (Eastern Standard Time): POST /login
+undefined
+
+Fri Jan 25 2019 11:45:42 GMT-0500 (Eastern Standard Time): DELETE /logout
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:45:43 GMT-0500 (Eastern Standard Time): DELETE /user/ThisIsNotAnObjectID
+CastError: Cast to ObjectId failed for value "ThisIsNotAnObjectID" at path "_id" for model "User"
+
+Fri Jan 25 2019 11:45:43 GMT-0500 (Eastern Standard Time): DELETE /user/5c4b3d2e34f2ad47103a7774
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:46:12 GMT-0500 (Eastern Standard Time): POST /item
+ValidationError: name: Path `name` is required.
+
+Fri Jan 25 2019 11:46:12 GMT-0500 (Eastern Standard Time): POST /item
+ValidationError: stackType: Path `stackType` is required.
+
+Fri Jan 25 2019 11:46:12 GMT-0500 (Eastern Standard Time): POST /item
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:46:13 GMT-0500 (Eastern Standard Time): GET /item
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:46:13 GMT-0500 (Eastern Standard Time): PATCH /item/5c4b3d5174068d17188c0797
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:46:14 GMT-0500 (Eastern Standard Time): DELETE /item/5c4b3d5174068d17188c0798
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:46:15 GMT-0500 (Eastern Standard Time): POST /user
+MongoError: E11000 duplicate key error collection: ErosTesting.users index: username_1 dup key: { : "harry.potter" }
+
+Fri Jan 25 2019 11:46:15 GMT-0500 (Eastern Standard Time): POST /user
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:46:17 GMT-0500 (Eastern Standard Time): PATCH /user/5c4b3d5174068d17188c079a
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:46:17 GMT-0500 (Eastern Standard Time): POST /login
+undefined
+
+Fri Jan 25 2019 11:46:17 GMT-0500 (Eastern Standard Time): POST /login
+undefined
+
+Fri Jan 25 2019 11:46:18 GMT-0500 (Eastern Standard Time): DELETE /logout
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:46:18 GMT-0500 (Eastern Standard Time): DELETE /user/ThisIsNotAnObjectID
+CastError: Cast to ObjectId failed for value "ThisIsNotAnObjectID" at path "_id" for model "User"
+
+Fri Jan 25 2019 11:46:19 GMT-0500 (Eastern Standard Time): DELETE /user/5c4b3d5174068d17188c079a
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:49:13 GMT-0500 (Eastern Standard Time): POST /item
+ValidationError: name: Path `name` is required.
+
+Fri Jan 25 2019 11:49:13 GMT-0500 (Eastern Standard Time): POST /item
+ValidationError: stackType: Path `stackType` is required.
+
+Fri Jan 25 2019 11:49:14 GMT-0500 (Eastern Standard Time): POST /item
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:49:14 GMT-0500 (Eastern Standard Time): GET /item
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:49:15 GMT-0500 (Eastern Standard Time): PATCH /item/5c4b3e049151e00d6cb2a233
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:49:15 GMT-0500 (Eastern Standard Time): DELETE /item/5c4b3e049151e00d6cb2a234
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:49:16 GMT-0500 (Eastern Standard Time): POST /user
+MongoError: E11000 duplicate key error collection: ErosTesting.users index: username_1 dup key: { : "harry.potter" }
+
+Fri Jan 25 2019 11:49:16 GMT-0500 (Eastern Standard Time): POST /user
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:49:17 GMT-0500 (Eastern Standard Time): PATCH /user/5c4b3e049151e00d6cb2a236
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:49:18 GMT-0500 (Eastern Standard Time): POST /login
+undefined
+
+Fri Jan 25 2019 11:49:18 GMT-0500 (Eastern Standard Time): POST /login
+undefined
+
+Fri Jan 25 2019 11:49:18 GMT-0500 (Eastern Standard Time): DELETE /logout
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:49:19 GMT-0500 (Eastern Standard Time): DELETE /user/ThisIsNotAnObjectID
+CastError: Cast to ObjectId failed for value "ThisIsNotAnObjectID" at path "_id" for model "User"
+
+Fri Jan 25 2019 11:49:19 GMT-0500 (Eastern Standard Time): DELETE /user/5c4b3e049151e00d6cb2a236
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:50:00 GMT-0500 (Eastern Standard Time): POST /item
+ValidationError: name: Path `name` is required.
+
+Fri Jan 25 2019 11:50:00 GMT-0500 (Eastern Standard Time): POST /item
+ValidationError: stackType: Path `stackType` is required.
+
+Fri Jan 25 2019 11:50:00 GMT-0500 (Eastern Standard Time): POST /item
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:50:00 GMT-0500 (Eastern Standard Time): GET /item
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:50:01 GMT-0500 (Eastern Standard Time): PATCH /item/5c4b3e35a6f66604208dca2a
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:50:02 GMT-0500 (Eastern Standard Time): DELETE /item/5c4b3e35a6f66604208dca2b
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:50:02 GMT-0500 (Eastern Standard Time): POST /user
+MongoError: E11000 duplicate key error collection: ErosTesting.users index: username_1 dup key: { : "harry.potter" }
+
+Fri Jan 25 2019 11:50:02 GMT-0500 (Eastern Standard Time): POST /user
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:50:04 GMT-0500 (Eastern Standard Time): PATCH /user/5c4b3e35a6f66604208dca2d
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:50:05 GMT-0500 (Eastern Standard Time): POST /login
+undefined
+
+Fri Jan 25 2019 11:50:05 GMT-0500 (Eastern Standard Time): POST /login
+undefined
+
+Fri Jan 25 2019 11:50:06 GMT-0500 (Eastern Standard Time): DELETE /logout
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:50:06 GMT-0500 (Eastern Standard Time): DELETE /user/ThisIsNotAnObjectID
+CastError: Cast to ObjectId failed for value "ThisIsNotAnObjectID" at path "_id" for model "User"
+
+Fri Jan 25 2019 11:50:07 GMT-0500 (Eastern Standard Time): DELETE /user/5c4b3e35a6f66604208dca2d
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:51:35 GMT-0500 (Eastern Standard Time): POST /item
+ValidationError: name: Path `name` is required.
+
+Fri Jan 25 2019 11:51:35 GMT-0500 (Eastern Standard Time): POST /item
+ValidationError: stackType: Path `stackType` is required.
+
+Fri Jan 25 2019 11:51:35 GMT-0500 (Eastern Standard Time): POST /item
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:51:35 GMT-0500 (Eastern Standard Time): GET /item
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:51:36 GMT-0500 (Eastern Standard Time): PATCH /item/5c4b3e94f32925574c6338df
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:51:37 GMT-0500 (Eastern Standard Time): DELETE /item/5c4b3e94f32925574c6338e0
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:51:37 GMT-0500 (Eastern Standard Time): POST /user
+MongoError: E11000 duplicate key error collection: ErosTesting.users index: username_1 dup key: { : "harry.potter" }
+
+Fri Jan 25 2019 11:51:37 GMT-0500 (Eastern Standard Time): POST /user
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:51:39 GMT-0500 (Eastern Standard Time): PATCH /user/5c4b3e94f32925574c6338e2
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:51:40 GMT-0500 (Eastern Standard Time): POST /login
+undefined
+
+Fri Jan 25 2019 11:51:40 GMT-0500 (Eastern Standard Time): POST /login
+undefined
+
+Fri Jan 25 2019 11:51:41 GMT-0500 (Eastern Standard Time): DELETE /logout
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:51:41 GMT-0500 (Eastern Standard Time): DELETE /user/ThisIsNotAnObjectID
+CastError: Cast to ObjectId failed for value "ThisIsNotAnObjectID" at path "_id" for model "User"
+
+Fri Jan 25 2019 11:51:41 GMT-0500 (Eastern Standard Time): DELETE /user/5c4b3e94f32925574c6338e2
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:53:17 GMT-0500 (Eastern Standard Time): POST /item
+ValidationError: name: Path `name` is required.
+
+Fri Jan 25 2019 11:53:17 GMT-0500 (Eastern Standard Time): POST /item
+ValidationError: stackType: Path `stackType` is required.
+
+Fri Jan 25 2019 11:53:17 GMT-0500 (Eastern Standard Time): POST /item
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:53:17 GMT-0500 (Eastern Standard Time): GET /item
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:53:18 GMT-0500 (Eastern Standard Time): PATCH /item/5c4b3ef7faa8144ba8f9ba60
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:53:19 GMT-0500 (Eastern Standard Time): DELETE /item/5c4b3ef7faa8144ba8f9ba61
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:53:19 GMT-0500 (Eastern Standard Time): POST /user
+MongoError: E11000 duplicate key error collection: ErosTesting.users index: username_1 dup key: { : "harry.potter" }
+
+Fri Jan 25 2019 11:53:19 GMT-0500 (Eastern Standard Time): POST /user
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:53:21 GMT-0500 (Eastern Standard Time): PATCH /user/5c4b3ef7faa8144ba8f9ba63
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:53:22 GMT-0500 (Eastern Standard Time): POST /login
+undefined
+
+Fri Jan 25 2019 11:53:22 GMT-0500 (Eastern Standard Time): POST /login
+undefined
+
+Fri Jan 25 2019 11:53:22 GMT-0500 (Eastern Standard Time): DELETE /logout
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:53:23 GMT-0500 (Eastern Standard Time): DELETE /user/ThisIsNotAnObjectID
+CastError: Cast to ObjectId failed for value "ThisIsNotAnObjectID" at path "_id" for model "User"
+
+Fri Jan 25 2019 11:53:23 GMT-0500 (Eastern Standard Time): DELETE /user/5c4b3ef7faa8144ba8f9ba63
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:53:28 GMT-0500 (Eastern Standard Time): POST /reboot/5c4b3f08faa8144ba8f9bb53
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:54:00 GMT-0500 (Eastern Standard Time): POST /item
+ValidationError: name: Path `name` is required.
+
+Fri Jan 25 2019 11:54:01 GMT-0500 (Eastern Standard Time): POST /item
+ValidationError: stackType: Path `stackType` is required.
+
+Fri Jan 25 2019 11:54:01 GMT-0500 (Eastern Standard Time): POST /item
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:54:01 GMT-0500 (Eastern Standard Time): GET /item
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:54:02 GMT-0500 (Eastern Standard Time): PATCH /item/5c4b3f26eb1a3d3c50dd8555
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:54:03 GMT-0500 (Eastern Standard Time): DELETE /item/5c4b3f26eb1a3d3c50dd8556
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:54:03 GMT-0500 (Eastern Standard Time): POST /user
+MongoError: E11000 duplicate key error collection: ErosTesting.users index: username_1 dup key: { : "harry.potter" }
+
+Fri Jan 25 2019 11:54:03 GMT-0500 (Eastern Standard Time): POST /user
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:54:05 GMT-0500 (Eastern Standard Time): PATCH /user/5c4b3f26eb1a3d3c50dd8558
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:54:06 GMT-0500 (Eastern Standard Time): POST /login
+undefined
+
+Fri Jan 25 2019 11:54:06 GMT-0500 (Eastern Standard Time): POST /login
+undefined
+
+Fri Jan 25 2019 11:54:06 GMT-0500 (Eastern Standard Time): DELETE /logout
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:54:07 GMT-0500 (Eastern Standard Time): DELETE /user/ThisIsNotAnObjectID
+CastError: Cast to ObjectId failed for value "ThisIsNotAnObjectID" at path "_id" for model "User"
+
+Fri Jan 25 2019 11:54:07 GMT-0500 (Eastern Standard Time): DELETE /user/5c4b3f26eb1a3d3c50dd8558
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:54:12 GMT-0500 (Eastern Standard Time): POST /reboot/5c4b3f34eb1a3d3c50dd8648
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:54:30 GMT-0500 (Eastern Standard Time): POST /item
+ValidationError: name: Path `name` is required.
+
+Fri Jan 25 2019 11:54:30 GMT-0500 (Eastern Standard Time): POST /item
+ValidationError: stackType: Path `stackType` is required.
+
+Fri Jan 25 2019 11:54:31 GMT-0500 (Eastern Standard Time): POST /item
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:54:31 GMT-0500 (Eastern Standard Time): GET /item
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:54:32 GMT-0500 (Eastern Standard Time): PATCH /item/5c4b3f440c0c940ab89e046c
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:54:32 GMT-0500 (Eastern Standard Time): DELETE /item/5c4b3f440c0c940ab89e046d
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:54:33 GMT-0500 (Eastern Standard Time): POST /user
+MongoError: E11000 duplicate key error collection: ErosTesting.users index: username_1 dup key: { : "harry.potter" }
+
+Fri Jan 25 2019 11:54:33 GMT-0500 (Eastern Standard Time): POST /user
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:54:35 GMT-0500 (Eastern Standard Time): PATCH /user/5c4b3f440c0c940ab89e046f
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:54:36 GMT-0500 (Eastern Standard Time): POST /login
+undefined
+
+Fri Jan 25 2019 11:54:36 GMT-0500 (Eastern Standard Time): POST /login
+undefined
+
+Fri Jan 25 2019 11:54:36 GMT-0500 (Eastern Standard Time): DELETE /logout
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:54:37 GMT-0500 (Eastern Standard Time): DELETE /user/ThisIsNotAnObjectID
+CastError: Cast to ObjectId failed for value "ThisIsNotAnObjectID" at path "_id" for model "User"
+
+Fri Jan 25 2019 11:54:37 GMT-0500 (Eastern Standard Time): DELETE /user/5c4b3f440c0c940ab89e046f
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:54:42 GMT-0500 (Eastern Standard Time): POST /reboot/5c4b3f520c0c940ab89e055f
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:58:22 GMT-0500 (Eastern Standard Time): POST /item
+ValidationError: name: Path `name` is required.
+
+Fri Jan 25 2019 11:58:22 GMT-0500 (Eastern Standard Time): POST /item
+ValidationError: stackType: Path `stackType` is required.
+
+Fri Jan 25 2019 11:58:22 GMT-0500 (Eastern Standard Time): POST /item
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:58:23 GMT-0500 (Eastern Standard Time): GET /item
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:58:23 GMT-0500 (Eastern Standard Time): PATCH /item/5c4b402850fcc35c24c2474a
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:58:24 GMT-0500 (Eastern Standard Time): DELETE /item/5c4b402850fcc35c24c2474b
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:58:29 GMT-0500 (Eastern Standard Time): POST /reboot/5c4b402850fcc35c24c2474a
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:58:39 GMT-0500 (Eastern Standard Time): PURGE /reset/5c4b402850fcc35c24c2474b
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:58:40 GMT-0500 (Eastern Standard Time): POST /user
+MongoError: E11000 duplicate key error collection: ErosTesting.users index: username_1 dup key: { : "harry.potter" }
+
+Fri Jan 25 2019 11:58:40 GMT-0500 (Eastern Standard Time): POST /user
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:58:42 GMT-0500 (Eastern Standard Time): PATCH /user/5c4b402850fcc35c24c2474d
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:58:43 GMT-0500 (Eastern Standard Time): POST /login
+undefined
+
+Fri Jan 25 2019 11:58:43 GMT-0500 (Eastern Standard Time): POST /login
+undefined
+
+Fri Jan 25 2019 11:58:43 GMT-0500 (Eastern Standard Time): DELETE /logout
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:58:44 GMT-0500 (Eastern Standard Time): DELETE /user/ThisIsNotAnObjectID
+CastError: Cast to ObjectId failed for value "ThisIsNotAnObjectID" at path "_id" for model "User"
+
+Fri Jan 25 2019 11:58:44 GMT-0500 (Eastern Standard Time): DELETE /user/5c4b402850fcc35c24c2474d
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:59:30 GMT-0500 (Eastern Standard Time): POST /item
+ValidationError: name: Path `name` is required.
+
+Fri Jan 25 2019 11:59:30 GMT-0500 (Eastern Standard Time): POST /item
+ValidationError: stackType: Path `stackType` is required.
+
+Fri Jan 25 2019 11:59:30 GMT-0500 (Eastern Standard Time): POST /item
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:59:31 GMT-0500 (Eastern Standard Time): GET /item
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:59:31 GMT-0500 (Eastern Standard Time): PATCH /item/5c4b406c83d6ee6fe4af81e1
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:59:32 GMT-0500 (Eastern Standard Time): DELETE /item/5c4b406c83d6ee6fe4af81e2
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:59:37 GMT-0500 (Eastern Standard Time): POST /reboot/5c4b406c83d6ee6fe4af81e1
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:59:48 GMT-0500 (Eastern Standard Time): PURGE /reset/5c4b406c83d6ee6fe4af81e2
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:59:48 GMT-0500 (Eastern Standard Time): POST /user
+MongoError: E11000 duplicate key error collection: ErosTesting.users index: username_1 dup key: { : "harry.potter" }
+
+Fri Jan 25 2019 11:59:48 GMT-0500 (Eastern Standard Time): POST /user
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:59:50 GMT-0500 (Eastern Standard Time): PATCH /user/5c4b406c83d6ee6fe4af81e4
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:59:51 GMT-0500 (Eastern Standard Time): POST /login
+undefined
+
+Fri Jan 25 2019 11:59:51 GMT-0500 (Eastern Standard Time): POST /login
+undefined
+
+Fri Jan 25 2019 11:59:51 GMT-0500 (Eastern Standard Time): DELETE /logout
+JsonWebTokenError: jwt malformed
+
+Fri Jan 25 2019 11:59:52 GMT-0500 (Eastern Standard Time): DELETE /user/ThisIsNotAnObjectID
+CastError: Cast to ObjectId failed for value "ThisIsNotAnObjectID" at path "_id" for model "User"
+
+Fri Jan 25 2019 11:59:52 GMT-0500 (Eastern Standard Time): DELETE /user/5c4b406c83d6ee6fe4af81e4
+JsonWebTokenError: jwt malformed
+

@@ -70,7 +70,7 @@ app.get('/item', authenticate, (req, res) => {
 app.patch('/item/:_id', authenticate, (req, res) => {
 	let {_id} = req.params;
 	if(!ObjectID.isValid(_id)) {
-		return res.status(404).send();
+		return res.status(400).send();
 	}
 	let body = _.pick(req.body, ['name', 'stackType', 'active', 'notes']);
 	Item.findOneAndUpdate({_id}, {$set: body}, {new: true})
@@ -89,9 +89,45 @@ app.patch('/item/:_id', authenticate, (req, res) => {
 app.delete('/item/:_id', authenticate, (req, res) => {
 	let {_id} = req.params;
 	if(!ObjectID.isValid(_id)) {
-		return res.status(404).send();
+		return res.status(400).send();
 	}
 	Item.findOneAndDelete({_id})
+		.then(item => {
+			if(!item) {
+				return res.status(404).send();
+			}
+			res.send({item});
+		}).catch(e => {
+			res.status(400).send();
+			logError(e, req);
+		});
+});
+
+//REBOOT ITEM
+app.post('/reboot/:_id', authenticate, (req, res) => {
+	let {_id} = req.params;
+	if(!ObjectID.isValid(_id)) {
+		return res.status(400).send();
+	}
+	Item.findByIdAndReboot(_id)
+		.then(item => {
+			if(!item) {
+				return res.status(404).send();
+			}
+			res.send({item});
+		}).catch(e => {
+			res.status(400).send();
+			logError(e, req);
+		});
+});
+
+//RESET ITEM
+app.purge('/reset/:_id', authenticate, (req, res) => {
+	let {_id} = req.params;
+	if(!ObjectID.isValid(_id)) {
+		return res.status(400).send();
+	}
+	Item.findByIdAndReset(_id)
 		.then(item => {
 			if(!item) {
 				return res.status(404).send();
