@@ -25,9 +25,6 @@ const ItemSchema = new mongoose.Schema({
 			message: props => `${props.value} is not a valid server stack`
 		}
 	},
-	creator: {
-		type: String,  //Add in required later
-	},
 	active: {
 		type: Boolean,
 		default: true,

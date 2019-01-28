@@ -165,7 +165,7 @@ describe('PATCH /item/:_id', () => {
 		})
 		.end(done);
 	});
-	it('should not return 404 for non-existent item', done => {
+	it('should return 404 for non-existent item', done => {
 		let body = {
 			name: 'Sam',
 			active: false,
@@ -179,7 +179,7 @@ describe('PATCH /item/:_id', () => {
 		.expect(404)
 		.end(done);
 	});
-	it('should not return 400 for invalid ObjectID', done => {
+	it('should return 400 for invalid ObjectID', done => {
 		let body = {
 			name: 'Sam',
 			active: false,

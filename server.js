@@ -6,6 +6,7 @@ const bodyParser = require('body-parser');
 const _ = require('lodash');
 const fs = require('fs');
 const {ObjectID} = require('mongodb');
+const cors = require('cors');
 
 //Local
 const {mongoose} = require('./db/mongoose');
@@ -20,6 +21,9 @@ const port = process.env.PORT || 3000;
 
 //Middleware
 app.use(bodyParser.json());
+app.use(cors({
+	exposedHeaders: ['x-auth']
+}));
 app.use((req, res, next) => {
 	if(process.env.NODE_ENV !== 'test') {
 		let now = new Date().toString();
@@ -38,7 +42,7 @@ app.use((req, res, next) => {
 
 
 //CLIENT ROUTE
-app.get('/', express.static('./public'));
+// app.get('/', express.static('./public'));
 
 //CREATE ITEM
 app.post('/item', authenticate, (req, res) => {
@@ -52,7 +56,6 @@ app.post('/item', authenticate, (req, res) => {
 			res.status(400).send();
 			logError(e, req);
 		});
-
 });
 
 //READ ALL ITEMS
@@ -207,12 +210,20 @@ app.patch('/user/:_id', authenticate, (req, res) => {
 	if(!ObjectID.isValid(_id)) {
 		return res.status(400).send();
 	}
-	let body = _.pick(req.body, ['password', 'superuser']);
-	User.findOneAndUpdate({_id}, {$set: body}, {new: true})
+	let {password, superuser} = req.body;
+	User.findOne({_id})
 		.then(user => {
 			if(!user) {
 				return res.status(404).send();
 			}
+			if(password) {
+				user.password = password;
+			}
+			if(superuser !== undefined) {
+				user.superuser = superuser;
+			}
+			return user.save()
+		}).then(user => {
 			res.send({user});
 		}).catch(e => {
 			res.status(400).send();
