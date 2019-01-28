@@ -41,8 +41,6 @@ app.use((req, res, next) => {
 });
 
 
-//CLIENT ROUTE
-app.get('/', express.static('./public'));
 
 //CREATE ITEM
 app.post('/item', authenticate, (req, res) => {
@@ -251,6 +249,10 @@ app.delete('/user/:_id', authenticate, (req, res) => {
 			logError(e, req);
 		});
 });
+
+
+//CLIENT ROUTE
+app.get('*', express.static('./public'));
 
 //Init Server
 app.listen(port, () => {
