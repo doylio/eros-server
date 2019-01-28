@@ -42,7 +42,7 @@ app.use((req, res, next) => {
 
 
 //CLIENT ROUTE
-// app.get('/', express.static('./public'));
+app.get('/', express.static('./public'));
 
 //CREATE ITEM
 app.post('/item', authenticate, (req, res) => {

@@ -2469,3 +2469,39 @@ undefined
 Mon Jan 28 2019 16:53:58 GMT-0500 (Eastern Standard Time): DELETE /logout
 undefined
 
+Mon Jan 28 2019 17:22:49 GMT-0500 (Eastern Standard Time): POST /login
+undefined
+
+Mon Jan 28 2019 17:22:50 GMT-0500 (Eastern Standard Time): POST /login
+undefined
+
+Mon Jan 28 2019 17:22:54 GMT-0500 (Eastern Standard Time): POST /login
+undefined
+
+Mon Jan 28 2019 17:22:57 GMT-0500 (Eastern Standard Time): POST /login
+undefined
+
+Mon Jan 28 2019 17:23:02 GMT-0500 (Eastern Standard Time): POST /login
+undefined
+
+Mon Jan 28 2019 17:23:26 GMT-0500 (Eastern Standard Time): POST /login
+undefined
+
+Mon Jan 28 2019 17:24:10 GMT-0500 (Eastern Standard Time): POST /login
+undefined
+
+Mon Jan 28 2019 17:24:11 GMT-0500 (Eastern Standard Time): POST /login
+undefined
+
+Mon Jan 28 2019 17:24:19 GMT-0500 (Eastern Standard Time): POST /login
+undefined
+
+Mon Jan 28 2019 17:24:20 GMT-0500 (Eastern Standard Time): POST /login
+undefined
+
+Mon Jan 28 2019 17:24:30 GMT-0500 (Eastern Standard Time): GET /user
+Error: Can't set headers after they are sent.
+
+Mon Jan 28 2019 17:24:35 GMT-0500 (Eastern Standard Time): GET /user
+Error: Can't set headers after they are sent.
+
